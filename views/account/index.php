@@ -24,21 +24,21 @@
             </div>
 
             <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="" name="email">
-                <label for="inputEmail">Email address</label>
+                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="" autofocus="" name="email">
+                <!--<label for="inputEmail">Email address</label>-->
             </div>
-
+            <BR/>
             <div class="form-label-group">
-                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="" name="password">
-                <label for="inputPassword">Password</label>
+                <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="" name="password">
+                <!--<label for="inputPassword">Password</label>-->
             </div>
-
+            <BR/>
             <div class="checkbox mb-3">
-                <label>
+                <!--<label>
                 <input type="checkbox" value="remember-me"> Remember me
-                </label>
+                </label>-->
             </div>
-            <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
+            <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
         </form>
     </div>
     <?php require 'views/shared/__footer.php' ?>

@@ -9,9 +9,17 @@
 <body>
     <?php require 'views/shared/__header.php' ?>
     <div class="main container">
-        <form class="form-login" action="<?php echo constant('URL'); ?>/account/login" method="POST">
+        <form class="form-login" action="<?php echo constant('URL'); ?>account/login" method="POST">
+            <?php
+                if(isset($this->message_error)) { ?>
+                    <div class="alert alert-danger" role="alert">
+                        <?php echo $this->message_error ?>
+                    </div>
+                <?php 
+                }
+            ?>
             <div class="text-center mb-4">
-                <img class="mb-4" src="public/img/logo.png" alt="" width="72" height="72">
+                <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="72" height="72">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
             </div>
 
@@ -30,7 +38,7 @@
                 <input type="checkbox" value="remember-me"> Remember me
                 </label>
             </div>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Login</button>
+            <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
         </form>
     </div>
     <?php require 'views/shared/__footer.php' ?>

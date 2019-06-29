@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="fixed-bottom">
+    <div class="bottom" style="margin-bottom: 0px">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a href="#">©2019</a>
         </nav>

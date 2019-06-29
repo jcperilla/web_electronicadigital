@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Portal Administrador</title>
 </head>
 <body>
     <?php require 'views/shared/__header.php' ?>
@@ -39,6 +39,8 @@
                 <th scope="col">Nombre</th>
                 <th scope="col">Apellido</th>
                 <th scope="col">Correo Electrónico</th>
+                <th scope="col">Hora Entrada</th>
+                <th scope="col">Hora Salida</th>
                 <th scope="col">Acciones</th>
                 </tr>
             </thead>
@@ -52,6 +54,8 @@
                         <td><?php echo $vigilante["first_name"]; ?></td>
                         <td><?php echo $vigilante["last_name"]; ?></td>
                         <td><?php echo $vigilante["email"]; ?></td>
+                        <td><?php echo $vigilante["entry_time"]; ?></td>
+                        <td><?php echo $vigilante["departure_time"]; ?></td>
                         <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearEditarVigilante"><i class="fas fa-user-edit"></i>Editar</button></td>
                     </tr>
                     <?php

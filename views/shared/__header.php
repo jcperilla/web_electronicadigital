@@ -27,6 +27,9 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo constant('URL'); ?>main">Inicio <span class="sr-only">(current)</span></a>
       </li>
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo constant('URL'); ?>vigilantes">Gestionar Vigilantes <span class="sr-only">(current)</span></a>
+      </li>
     </ul>
   </div>
 </nav>

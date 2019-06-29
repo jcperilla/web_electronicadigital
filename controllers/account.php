@@ -9,7 +9,10 @@
         }
 
         function login() {
+            $this->view->render('account/index');
+        }
 
+        function try_login(){
             $email = $_POST['email'];
             $password = $_POST['password'];
             $user = $this->model->login(['email' => $email, 'password' => $password]);
@@ -20,6 +23,7 @@
                 $this->view->message_error = "Datos incorrectos";
                 $this->render();
             }
+
         }
     }
 

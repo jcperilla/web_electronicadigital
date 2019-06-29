@@ -27,7 +27,7 @@
             if(Session::getStatus() === 1 || empty($user['id'])) {
                 header('location: '.constant('URL').'account/login');
             } else {
-                $this->view->render('main/admin_pane');
+                header('location: '.constant('URL').'vigilantes');
             }
         }
     }

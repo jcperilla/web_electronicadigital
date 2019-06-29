@@ -9,7 +9,7 @@
          * Método para obtener los vigilantes
          */
         public function obtenerVigilantes() {
-            $query = $this->db->connect()->prepare('SELECT * FROM user');
+            $query = $this->db->connect()->prepare('SELECT * FROM user u, vigilant v WHERE u.type_user="2" AND v.id=u.id');
             $query->execute();
 
             $row = $query->fetchALL(PDO::FETCH_ASSOC);
@@ -29,8 +29,9 @@
         public function crearVigilante($data)
         {
             //Se inserta en la tabla principal (user)
-            $query = $this->db->connect()->prepare('INSERT INTO user (id, first_name, last_name, email, password) VALUES (?, ?, ?, ?, ?)');
-            $query->execute([$data["id"], $data["firt_name"], $data["last_name"], $data["email"], $data["password"]]);
+            $query = $this->db->connect()->prepare('INSERT INTO user (id, first_name, last_name, email, password, type_user) VALUES (?, ?, ?, ?, ?, ?)');
+            $type_user='2';
+            $query->execute([$data["id"], $data["firt_name"], $data["last_name"], $data["email"], $data["password"],$type_user]);
 
             //Se inserta en la tabla vigilant
             $query = $this->db->connect()->prepare('INSERT INTO vigilant (id, entry_time, departure_time) VALUES (?, ?, ?)');

@@ -3,8 +3,6 @@
 
         public function __construct() {
             parent::__construct();
-            session_unset();
-            session_destroy();
         }
 
         public function login($data) {

@@ -42,9 +42,7 @@
 
             <BR/>
 
-
-
-            <div class="d-none">
+            <div class="row">
                 <div class="col-sm-6" style="margin-bottom: 10px">
                     <button id="buttonIN" class="btn btn-lg btn-success btn-block" type="submit"><i class="fas fa-arrow-circle-up fa-5x"></i></button>
                 </div>
@@ -59,5 +57,10 @@
         </div>
         </form>
     <?php require 'views/shared/__footer.php' ?>
+
 </body>
 </html>
+
+<script type="text/javascript" src="<?php echo constant('URL')?>public/js/util.js">
+
+</script>

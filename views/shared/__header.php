@@ -43,9 +43,15 @@
       <li class="nav-item active">
         <a class="nav-link" href="<?php echo constant('URL'); ?>main/admin_pane">Admin Pane <span class="sr-only">(current)</span></a>
       </li>
+<<<<<<< HEAD
       <?php }
         }
       ?>
+=======
+      <li class="nav-item active">
+        <a class="nav-link" href="<?php echo constant('URL'); ?>vigilantes">Gestionar Vigilantes <span class="sr-only">(current)</span></a>
+      </li>
+>>>>>>> 4e8ca8b0dc0545a1c16e1df1341a45d72a3a03b6
     </ul>
   </div>
 </nav>

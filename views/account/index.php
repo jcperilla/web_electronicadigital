@@ -9,7 +9,7 @@
 <body>
     <?php require 'views/shared/__header.php' ?>
     <div class="main container">
-        <form class="form-login" action="<?php echo constant('URL'); ?>account/login" method="POST">
+        <form class="form-login" action="<?php echo constant('URL'); ?>account/try_login" method="POST">
             <?php
                 if(isset($this->message_error)) { ?>
                     <div class="alert alert-danger" role="alert">

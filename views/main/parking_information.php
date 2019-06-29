@@ -41,17 +41,21 @@
             </div>
 
             <BR/>
+            <?php
+                Session::init();
+                $type = Session::get('user')['type_user'];
+                if($type== 2) { ?>
+                    <div class="row">
+                        <div class="col-sm-6" style="margin-bottom: 10px">
+                            <button id="buttonIN" class="btn btn-lg btn-success btn-block" type="submit"><i class="fas fa-arrow-circle-up fa-5x"></i></button>
+                        </div>
 
-            <div class="row">
-                <div class="col-sm-6" style="margin-bottom: 10px">
-                    <button id="buttonIN" class="btn btn-lg btn-success btn-block" type="submit"><i class="fas fa-arrow-circle-up fa-5x"></i></button>
-                </div>
-
-                <div class="col-sm-6">
-                    <button id="buttonOUT" class="btn btn-lg btn-danger btn-block" type="submit"><i class="fas fa-arrow-circle-down fa-5x"></i></button>
-                </div>
-            </div>
-    
+                        <div class="col-sm-6">
+                            <button id="buttonOUT" class="btn btn-lg btn-danger btn-block" type="submit"><i class="fas fa-arrow-circle-down fa-5x"></i></button>
+                        </div>
+                    </div>
+            <?php    }
+            ?>
         </div>
         </div>
         </div>

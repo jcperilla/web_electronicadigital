@@ -1,5 +1,4 @@
 $(document).ready(function() {
-	alert('hola');
 	setInterval(function(){ get_info_parking_lot(); }, 3000);
 });
 

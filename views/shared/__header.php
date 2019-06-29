@@ -21,12 +21,31 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
+      <?php 
+      if(!isset(Session::get('user')['id'])) { ?>
+        <li class="nav-item active">
+          <a class="nav-link" href="<?php echo constant('URL'); ?>account">Login <span class="sr-only">(current)</span></a>
+        </li>
+     <?php  }
+      else { ?>
+        <li class="nav-item active">
+          <a class="nav-link" href="<?php echo constant('URL'); ?>account/destroySession">Cerrar sesion <span class="sr-only">(current)</span></a>
+        </li>
+      <?php }
+      ?>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo constant('URL'); ?>account">Login <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo constant('URL'); ?>main/consulta">Inicio <span class="sr-only">(current)</span></a>
       </li>
+      <?php 
+        if(isset(Session::get('user')['id'])) {
+          if(Session::get('user')['type_user'] == 1) {
+      ?>
       <li class="nav-item active">
-        <a class="nav-link" href="<?php echo constant('URL'); ?>main">Inicio <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="<?php echo constant('URL'); ?>main/admin_pane">Admin Pane <span class="sr-only">(current)</span></a>
       </li>
+      <?php }
+        }
+      ?>
     </ul>
   </div>
 </nav>

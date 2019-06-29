@@ -6,16 +6,11 @@
     class App {
 
         function __construct() {
-            
-            if(!isset($this->userSession)) {
-                $this->userSession = new UserSession();
-            }
-
             $url = isset($_GET['url']) ? $_GET['url'] : null;
             $url = rtrim($url, '/');
             $url = explode('/',  $url);
             
-            if(isset($this->userSession) || isset($_POST['email'])) {
+
                 //if($this->userSession)
                 if(empty($url[0])) {
                     $fileController = 'controllers/main.php';
@@ -48,14 +43,7 @@
                 } else {
                 $controller = new ErrorPage();
                 }
-            }
-            else {
-                $fileController = 'controllers/account.php';
-                require_once $fileController;
-                $controller = new Account();
-                $controller->loadModel('account');
-                $controller->render();
-            }
+           
         }
     }
 ?>

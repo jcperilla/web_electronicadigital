@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/default.css">
     <script type="text/javascript" src="<?php echo constant('URL')?>public/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="<?php echo constant('URL')?>public/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a8e86ecd19.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">

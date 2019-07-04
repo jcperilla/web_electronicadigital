@@ -27,7 +27,7 @@
             $result = $this->GET_query_parking();
 
             $file = "views/main/available.php";
-            $texto = $result['available']; //La variable de cantidad disponible
+            $texto = $result['available']; 
             $fp = fopen($file, "w");
             fwrite($fp, $texto);
             fclose($fp);
@@ -36,7 +36,9 @@
         }
 
         function update_quotas() {
-            $this->model->update_work_log(['id_vigilant' => '1', 'type' => $_POST['type']]);
+            Session::init();
+            $id = Session::get('user')['id'];
+            $this->model->update_work_log(['id_vigilant' => $id, 'type' => $_POST['type']]);
         }
 
         function admin_pane() {

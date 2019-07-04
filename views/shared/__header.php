@@ -7,6 +7,7 @@
     <title>Parqueadero Uniquindio</title>
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo constant('URL')?>public/css/default.css">
+    <link rel="icon" href="<?php echo constant('URL')?>public/img/eparking.png">
     <script type="text/javascript" src="<?php echo constant('URL')?>public/bootstrap/js/jquery-3.3.1.slim.min.js"></script>
     <script type="text/javascript" src="<?php echo constant('URL')?>public/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/a8e86ecd19.js"></script>

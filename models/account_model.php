@@ -30,11 +30,14 @@
 
             $row = $query->fetch(PDO::FETCH_ASSOC);
 
-            $data_entry = new DateTime($row['entry_time']);
-            $departure_time = new DateTime($row['departure_time']);
-            $current_time = new DateTime();
+            $entry_time = date($row['entry_time']);
+            $departure_time = date($row['departure_time']);
+    
+            date_default_timezone_set('America/Bogota');
 
-            if ($data_entry < $current_time &&  $departure_time > $current_time) {
+            $current_time = date("H:i:s");
+
+            if ($entry_time < $current_time && $departure_time > $current_time) {
                 return $row;
             }
             else {

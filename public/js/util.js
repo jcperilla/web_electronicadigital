@@ -7,6 +7,12 @@ function get_info_parking_lot(){
 		url: "http://localhost/parking_lot/main/get_async_parking_info",
 		success: function(res) {
 			update_info(res);
+			var busy = document.getElementById("cant_busy_txt").innerHTML;
+			var available = document.getElementById("can_available_txt").innerHTML;
+			
+			document.getElementById("buttonOUT").disabled  = (busy == 0);
+			document.getElementById("buttonIN").disabled  = (available == 0);	
+	
 		},
 		error: function(x) {
 	        console.log("No se ha podido obtener la información" + x);
@@ -29,7 +35,7 @@ function update_quotas(type) {
 			get_info_parking_lot();
 		},
 		error: function(x) {
-	        console.log("No se ha podido obtener la información" + x);
-	    }
+			console.log("No se ha podido obtener la información" + x);
+		}
 	});
 }

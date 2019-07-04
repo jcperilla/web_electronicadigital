@@ -1,5 +1,5 @@
 <?php
-    define('URL', 'http://localhost/parking_lot/');
+    define('URL', 'http://localhost/web_electronicadigital/');
 
     define('HOST', 'localhost');
     define('DB', 'parkinglot');

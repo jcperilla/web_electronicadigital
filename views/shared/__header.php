@@ -14,7 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <a class="navbar-brand" href="#">Parqueadero</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -29,7 +29,7 @@
         </li>
      <?php  }
       else { ?>
-        <li class="nav-item active">
+        <li class="nav-item active ">
           <a class="nav-link" href="<?php echo constant('URL'); ?>account/destroySession">Cerrar sesion <span class="sr-only">(current)</span></a>
         </li>
       <?php }
@@ -49,6 +49,28 @@
       ?>
 
     </ul>
+    <?php 
+        if(isset(Session::get('user')['id'])) {
+      ?>
+      <div class="form-inline my-2 my-lg-0 ">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-user"></i>
+            <?php  echo Session::get('user')['first_name'].' '.Session::get('user')['last_name']?>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <?php }
+        
+      ?>
   </div>
 </nav>
 </body>

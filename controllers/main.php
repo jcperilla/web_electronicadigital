@@ -10,8 +10,9 @@
         }
 
         function consulta(){
-        	$this->view->cant_available=$this->GET_query_parking()['available'];
-            $this->view->cant_busy=$this->GET_query_parking()['busy'];
+            $result = $this->GET_query_parking();
+        	$this->view->cant_available=$result['available'];
+            $this->view->cant_busy=$result['busy'];
         	$this->view->render('main/parking_information');
         }
 
@@ -20,6 +21,15 @@
             if(isset($result)) {
       			return $result;
             }
+        }
+
+        function get_async_parking_info() {
+            $result = $this->GET_query_parking();
+            echo json_encode($result);
+        }
+
+        function update_quotas() {
+            $this->model->update_work_log(['id_vigilant' => '1', 'type' => $_POST['type']]);
         }
 
         function admin_pane() {

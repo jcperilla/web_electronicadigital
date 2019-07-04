@@ -28,3 +28,10 @@
 {
     width: 450px !important;
 }
+
+.div-info {
+    text-align: center;
+}
+.div-info p {
+    font-size: 50px
+}

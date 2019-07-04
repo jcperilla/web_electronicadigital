@@ -34,6 +34,11 @@
             }
             
         }
+
+        public function update_work_log($data) {
+            $query = $this->db->connect()->prepare('INSERT INTO work_log (id_vigilant, parking_lot, type) VALUES (?, ?, ?)');
+            $query->execute([$data["id_vigilant"],'1', $data["type"]]);
+        }
     }
 
 ?>

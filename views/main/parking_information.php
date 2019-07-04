@@ -50,11 +50,12 @@
                     if($type== 2) { ?>
                         <div class="row">
                             <div class="col-sm-6" style="margin-bottom: 10px">
-                                <button id="buttonIN" class="btn btn-lg btn-success btn-block" onclick="update_quotas(1)"><span class="">Ingreso</span><i class="fas fa-arrow-circle-up fa-5x"></i></button>
+                                <button id="buttonIN" class="btn btn-lg btn-success btn-block" onclick="update_quotas(1)"><p class="font-weight-bold">Ingreso</p><i class="fas fa-arrow-circle-up fa-5x"></i></button>
                             </div>
 
                             <div class="col-sm-6">
-                                <button id="buttonOUT" class="btn btn-lg btn-danger btn-block" onclick="update_quotas(0)"><i class="fas fa-arrow-circle-down fa-5x"></i></button>
+                                <button id="buttonOUT" class="btn btn-lg btn-danger btn-block" onclick="update_quotas(0)"><p class="
+                                    font-weight-bold">Salida</p><i class="fas fa-arrow-circle-down fa-5x"></i></button>
                             </div>
                         </div>
                 <?php    }

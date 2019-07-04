@@ -1,10 +1,12 @@
+var _url = null;
 $(document).ready(function() {
+	_url = document.getElementById('url').dataset.url;
 	setInterval(function(){ get_info_parking_lot(); }, 1000);
 });
 
 function get_info_parking_lot(){
 	$.ajax({
-		url: "http://localhost/parking_lot/main/get_async_parking_info",
+		url: _url + "main/get_async_parking_info",
 		success: function(res) {
 			update_info(res);
 			var busy = document.getElementById("cant_busy_txt").innerHTML;
@@ -30,7 +32,7 @@ function update_quotas(type) {
 	$.ajax({
 		data: { "type": type },
 		type: 'POST',
-		url: "http://localhost/parking_lot/main/update_quotas",
+		url: _url + "main/update_quotas",
 		success: function() {
 			get_info_parking_lot();
 		},

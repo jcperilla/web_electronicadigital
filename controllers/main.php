@@ -25,6 +25,13 @@
 
         function get_async_parking_info() {
             $result = $this->GET_query_parking();
+
+            $file = "views/main/available.php";
+            $texto = $result['available']; //La variable de cantidad disponible
+            $fp = fopen($file, "w");
+            fwrite($fp, $texto);
+            fclose($fp);
+
             echo json_encode($result);
         }
 
@@ -39,6 +46,10 @@
             } else {
                 header('location: '.constant('URL').'vigilantes');
             }
+        }
+
+        function arduino_data() {
+            $this->view->render('main/available');
         }
     }
 

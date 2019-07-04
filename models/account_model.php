@@ -44,6 +44,11 @@
                 return null;
             }
         }
+
+        public function recovery_password($data){
+            $query = $this->db->connect()->prepare('UPDATE user SET password=:password where id = :id');
+            $query->execute(['id' => $data['id'],'password' => $data['password']]);
+        }
     }
 
 ?>

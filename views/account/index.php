@@ -19,12 +19,12 @@
                 }
             ?>
             <div class="text-center mb-4">
-                <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="72" height="72">
+                <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="130" height="130">
                 <h1 class="h3 mb-3 font-weight-normal">Login</h1>
             </div>
 
             <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="" autofocus="" name="email">
+                <input type="email" id="inputEmail" class="form-control valid" placeholder="Correo electrónico" required="" autofocus="" name="email">
                 <!--<label for="inputEmail">Email address</label>-->
             </div>
             <BR/>
@@ -33,12 +33,16 @@
                 <!--<label for="inputPassword">Password</label>-->
             </div>
             <BR/>
-            <div class="checkbox mb-3">
-                <!--<label>
-                <input type="checkbox" value="remember-me"> Remember me
-                </label>-->
-            </div>
+
             <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
+            
+            <BR/>
+            <div class="form-label-group">
+                
+                <a href="#" class="text-success">Olvidé contraseña</a>
+                
+            </div>            
+
         </form>
     </div>
     <?php require 'views/shared/__footer.php' ?>

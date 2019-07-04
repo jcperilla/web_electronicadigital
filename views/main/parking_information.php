@@ -24,8 +24,8 @@
                         ?>
                         <BR/>
                         <div class="text-center mb-4">
-                            <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="72" height="72">
-                            <h1 class="display-5">Consultar disponibilidad de parqueadero <i class="fas fa-motorcycle"></i></h1>
+                            <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="130" height="130">
+                            <h1 class="display-5">Consultar disponibilidad parqueadero Medicina <i class="fas fa-motorcycle"></i></h1>
                         </div>
                         <br><br>
                         <div class="row  div-info">
@@ -50,7 +50,7 @@
                     if($type== 2) { ?>
                         <div class="row">
                             <div class="col-sm-6" style="margin-bottom: 10px">
-                                <button id="buttonIN" class="btn btn-lg btn-success btn-block" onclick="update_quotas(1)"><i class="fas fa-arrow-circle-up fa-5x"></i></button>
+                                <button id="buttonIN" class="btn btn-lg btn-success btn-block" onclick="update_quotas(1)"><span class="">Ingreso</span><i class="fas fa-arrow-circle-up fa-5x"></i></button>
                             </div>
 
                             <div class="col-sm-6">

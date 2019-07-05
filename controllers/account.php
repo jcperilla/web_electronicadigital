@@ -48,6 +48,25 @@
             Session::close();
             header('location: '.constant('URL'));
         }
+
+        function change_password() {
+            $this->view->render('account/change_password');
+        }
+
+        function update_password() {
+            $password_confirm = $_POST['password_confirm'];
+            $password = $_POST['password'];
+
+            if($password_confirm == $password) {
+                $this->model->change_password(['id' => Session::get('user')['id'], 'password' => $password]);
+                $this->view->info_message = "Se actualizo la contraseña de manera correcta";
+                $this->view->render('account/change_password');
+            }
+            else {
+                $this->view->message_error = "Las contraseñas no coinciden";
+                $this->view->render('account/change_password');
+            }
+        }
     }
 
 ?>

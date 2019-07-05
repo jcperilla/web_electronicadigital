@@ -37,12 +37,6 @@
             <button class="btn btn-lg btn-success btn-block" type="submit">Entrar</button>
             
             <BR/>
-            <div class="form-label-group">
-                
-                <a href="#" class="text-success">Olvidé contraseña</a>
-                
-            </div>            
-
         </form>
     </div>
     <?php require 'views/shared/__footer.php' ?>

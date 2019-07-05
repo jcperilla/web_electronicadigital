@@ -9,7 +9,7 @@
 <body>
     <?php require 'views/shared/__header.php' ?>
     <div class="main container">
-        <form class="form-login" action="<?php echo constant('URL'); ?>" method="POST">
+        <form class="form-login" action="<?php echo constant('URL') ?>account/update_password" method="POST">
             <?php
                 if(isset($this->message_error)) { ?>
                     <div class="alert alert-danger" role="alert">
@@ -17,18 +17,23 @@
                     </div>
                 <?php 
                 }
-            ?>
+
+                if(isset($this->info_message)) { ?>
+                    <div class="alert alert-info" role="alert">
+                        <?php echo $this->info_message ?>
+                    </div>
+                <?php } ?>
             <div class="text-center mb-4">
                 <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="130" height="130">
                 <h1 class="h3 mb-3 font-weight-normal">Cambiar Contraseña</h1>
             </div>
 
             <div class="form-label-group">
-                <input type="password" id="inputPassword1" class="form-control" placeholder="Contraseña Nueva" required="" autofocus="" name="email">
+                <input type="password" id="inputPassword1" class="form-control" placeholder="Contraseña nueva" required="" autofocus="" name="password" onkeypress="verify_password()">
             </div>
             <BR/>
             <div class="form-label-group">
-                <input type="password" id="inputPassword2" class="form-control" placeholder="Repetir Contraseña" required="" name="password">
+                <input type="password" id="inputPassword2" class="form-control" placeholder="Repetir contraseña" required="" name="password_confirm" onkeypress="verify_password()">
             </div>
             <BR/>
 

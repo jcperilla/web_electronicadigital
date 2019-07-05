@@ -25,9 +25,18 @@
          */
         function ingresar()
         {
-            $respuesta = $this->model->crearVigilante($_POST);
+            if(!$_POST["idVigilante"])
+            {
+                $respuesta = $this->model->crearVigilante($_POST);
 
-            $this->view->message_exito = "¡Vigilante Insertado con Éxito!";
+                $this->view->message_exito = "¡Vigilante Insertado con Éxito!";
+            }
+            else
+            {
+                $respuesta = $this->model->editarVigilante($_POST);
+
+                $this->view->message_exito = "¡Vigilante Actualizado con Éxito!";
+            }
             
             $this->render("vigilantes/listarVigilantes");
         }

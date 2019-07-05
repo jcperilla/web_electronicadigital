@@ -10,6 +10,9 @@
       </div>
       <div class="modal-body">
       <form action="<?php echo constant('URL'); ?>vigilantes/ingresar" method="POST">
+
+      <input type="hidden" name="idVigilante" id="idVigilante">
+
         <div class="form-group row">
             <label for="id" class="col-sm-5 col-form-label">Cédula</label>
             <div class="col-sm-7">
@@ -18,9 +21,9 @@
         </div>
 
         <div class="form-group row">
-            <label for="firt_name" class="col-sm-5 col-form-label">Nombre</label>
+            <label for="first_name" class="col-sm-5 col-form-label">Nombre</label>
             <div class="col-sm-7">
-                <input type="text" required class="form-control-plaintext" id="firt_name" name="firt_name" placeholder="Ingrese el nombre">
+                <input type="text" required class="form-control-plaintext" id="first_name" name="first_name" placeholder="Ingrese el nombre">
             </div>
         </div>
         <div class="form-group row">

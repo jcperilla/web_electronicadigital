@@ -56,7 +56,7 @@
                         <td><?php echo $vigilante["email"]; ?></td>
                         <td><?php echo $vigilante["entry_time"]; ?></td>
                         <td><?php echo $vigilante["departure_time"]; ?></td>
-                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearEditarVigilante"><i class="fas fa-user-edit"></i>Editar</button></td>
+                        <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearEditarVigilante" onclick='editarVigilante(<?php echo json_encode($vigilante); ?>)'><i class="fas fa-user-edit"></i>Editar</button></td>
                     </tr>
                     <?php
                 }
@@ -68,3 +68,28 @@
     <?php require 'views/shared/__footer.php' ?>
 </body>
 </html>
+
+<script>
+
+
+function editarVigilante(datosVigilante)
+{
+    console.log("entrooo");
+    jQuery("#id").css("pointer-events", "none");
+
+    jQuery("#id").val(Number(datosVigilante.id));
+    
+
+    jQuery("#idVigilante").val(datosVigilante.id);
+    jQuery("#first_name").val(datosVigilante.first_name);
+    jQuery("#last_name").val(datosVigilante.last_name);
+    jQuery("#email").val(datosVigilante.email);
+
+    jQuery("#entry_time").val(datosVigilante.entry_time);
+    jQuery("#departure_time").val(datosVigilante.departure_time);
+    jQuery("#password").val(datosVigilante.password);
+
+    console.log(Number(datosVigilante.id));
+}
+
+</script>

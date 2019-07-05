@@ -37,6 +37,19 @@
             $query = $this->db->connect()->prepare('INSERT INTO vigilant (id, entry_time, departure_time) VALUES (?, ?, ?)');
             $query->execute([$data["id"], $data["entry_time"], $data["departure_time"]]);
         }
+
+        /**
+         * Método para actualizar un vigilante
+         */
+        public function editarVigilante($data)
+        {
+            //Se inserta en la tabla principal (user)
+            $query = $this->db->connect()->prepare('UPDATE user SET  first_name = ?, last_name = ?, email = ?, password = ?, type_user = ? WHERE id =  ?');
+            
+            $type_user='2';
+
+            $query->execute([$data["first_name"], $data["last_name"], $data["email"], $data["password"], $type_user, $data["id"]]);
+        }
     }
 
 ?>

@@ -25,7 +25,7 @@
                         <BR/>
                         <div class="text-center mb-4">
                             <img class="mb-4" src="<?php echo constant('URL'); ?>public/img/logo.png" alt="" width="130" height="130">
-                            <h1 class="display-5">Consultar disponibilidad parqueadero Medicina <i class="fas fa-motorcycle"></i></h1>
+                            <h1 class="display-5">Consultar disponibilidad Parqueadero Medicina <i class="fas fa-motorcycle"></i></h1>
                         </div>
                         <br><br>
                         <div class="row  div-info">

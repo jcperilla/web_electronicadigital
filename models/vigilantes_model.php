@@ -32,7 +32,7 @@
             $query = $this->db->connect()->prepare('INSERT INTO user (id, first_name, last_name, email, password, type_user) VALUES (?, ?, ?, ?, ?, ?)');
             $type_user='2';
             $pass = password_hash($data["password"], PASSWORD_BCRYPT);
-            $query->execute([$data["id"], $data["firt_name"], $data["last_name"], $data["email"], $pass ,$type_user]);
+            $query->execute([$data["id"], $data["first_name"], $data["last_name"], $data["email"], $pass ,$type_user]);
 
             //Se inserta en la tabla vigilant
             $query = $this->db->connect()->prepare('INSERT INTO vigilant (id, entry_time, departure_time) VALUES (?, ?, ?)');
@@ -50,6 +50,11 @@
             $type_user='2';
 
             $query->execute([$data["first_name"], $data["last_name"], $data["email"], $data["password"], $type_user, $data["id"]]);
+
+            //Se actualiza el horario del vigilante
+            $query2 = $this->db->connect()->prepare('UPDATE vigilant SET entry_time = ?, departure_time = ? WHERE id =  ?');
+
+            $query2->execute([$data["entry_time"], $data["departure_time"], $data["id"]]);
         }
     }
 

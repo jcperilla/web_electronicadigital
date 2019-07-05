@@ -8,7 +8,7 @@
         public function login($data) {
             $query = $this->db->connect()->prepare('SELECT * FROM user where email = :email');
             $query->execute(['email' => $data['email']]);
-
+            
             $row = $query->fetch(PDO::FETCH_ASSOC);
             if(password_verify($data['password'], $row['password'])){
                 return $row;

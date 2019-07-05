@@ -24,13 +24,11 @@
             </div>
 
             <div class="form-label-group">
-                <input type="email" id="inputEmail" class="form-control valid" placeholder="Correo electrónico" required="" autofocus="" name="email">
-                <!--<label for="inputEmail">Email address</label>-->
+                <input type="email" id="inputEmail" class="form-control" placeholder="Correo electrónico" required="" autofocus="" name="email">
             </div>
             <BR/>
             <div class="form-label-group">
                 <input type="password" id="inputPassword" class="form-control" placeholder="Contraseña" required="" name="password">
-                <!--<label for="inputPassword">Password</label>-->
             </div>
             <BR/>
 

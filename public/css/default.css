@@ -52,3 +52,11 @@
 .navbar-light .navbar-toggler {
     border-color: white;
 }
+
+.btn-danger:hover {
+    background-color: #bd2130;
+}
+
+.alert-primary {
+    margin-top: 15px;
+}

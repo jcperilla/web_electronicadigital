@@ -10,17 +10,11 @@
             $query->execute(['email' => $data['email']]);
 
             $row = $query->fetch(PDO::FETCH_ASSOC);
-
             if(password_verify($data['password'], $row['password'])){
-                return $row['email'];
+                return $row;
             }
             else {
-                if($data['password'] == $row['password']) {
-                   return $row;
-                }
-                else { 
-                   return null;
-                }
+                return null;
             }
         }
 

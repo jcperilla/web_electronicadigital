@@ -32,6 +32,7 @@
         <br />
         <button type="button" onclick="clean_form_vigilant()" class="btn addVigilante" data-toggle="modal" data-target="#crearEditarVigilante"><i class="fas fa-user-plus"></i>Crear Vigilante</button>
         <?php require "views/vigilantes/crearVigilanteModal.php"; ?>
+        <div class="table-responsive-sm">
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -63,6 +64,7 @@
             ?>
             </tbody>
         </table>
+        </div>
         <br><br>
     </div>
     <?php require 'views/shared/__footer.php' ?>

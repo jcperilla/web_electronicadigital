@@ -30,7 +30,7 @@
             <hr />
         </center>
         <br />
-        <button type="button" class="btn addVigilante" data-toggle="modal" data-target="#crearEditarVigilante"><i class="fas fa-user-plus"></i>Crear Vigilante</button>
+        <button type="button" onclick="clean_form_vigilant()" class="btn addVigilante" data-toggle="modal" data-target="#crearEditarVigilante"><i class="fas fa-user-plus"></i>Crear Vigilante</button>
         <?php require "views/vigilantes/crearVigilanteModal.php"; ?>
         <table class="table">
             <thead class="thead-dark">
@@ -75,9 +75,11 @@
 function editarVigilante(datosVigilante)
 {
     console.log("entrooo");
-    jQuery("#id").css("pointer-events", "none");
+    
 
     jQuery("#id").val(Number(datosVigilante.id));
+
+    document.getElementById("id").readOnly = true;
     
 
     jQuery("#idVigilante").val(datosVigilante.id);
@@ -85,11 +87,17 @@ function editarVigilante(datosVigilante)
     jQuery("#last_name").val(datosVigilante.last_name);
     jQuery("#email").val(datosVigilante.email);
 
+    document.getElementById("email").readOnly = true;
+
     jQuery("#entry_time").val(datosVigilante.entry_time);
     jQuery("#departure_time").val(datosVigilante.departure_time);
     jQuery("#password").val(datosVigilante.password);
 
     console.log(Number(datosVigilante.id));
 }
+
+</script>
+
+<script type="text/javascript" src="<?php echo constant('URL')?>public/js/util.js">
 
 </script>

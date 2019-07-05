@@ -61,7 +61,6 @@ function update_quotas(type) {
 
 
 function clean_form_vigilant(){
-	alert('Metodo limpiar');
 	document.getElementById("id").readOnly = false;
 	document.getElementById("email").readOnly = false;
 

@@ -10,17 +10,11 @@
             $query->execute(['email' => $data['email']]);
 
             $row = $query->fetch(PDO::FETCH_ASSOC);
-
             if(password_verify($data['password'], $row['password'])){
-                return $row['email'];
+                return $row;
             }
             else {
-                if($data['password'] == $row['password']) {
-                   return $row;
-                }
-                else { 
-                   return null;
-                }
+                return null;
             }
         }
 
@@ -45,9 +39,10 @@
             }
         }
 
-        public function recovery_password($data){
+        public function change_password($data){
             $query = $this->db->connect()->prepare('UPDATE user SET password=:password where id = :id');
-            $query->execute(['id' => $data['id'],'password' => $data['password']]);
+            $pass = password_hash($data['password'], PASSWORD_BCRYPT);
+            $query->execute(['id' => $data['id'],'password' => $pass]);
         }
     }
 

@@ -48,6 +48,7 @@
             <?php  echo Session::get('user')['first_name'].' '.Session::get('user')['last_name']?>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="<?php echo constant('URL'); ?>account/change_password">Cambiar contraseña <span class="sr-only">(current)</span></a>
               <a class="dropdown-item" href="<?php echo constant('URL'); ?>account/destroySession">Cerrar sesion <span class="sr-only">(current)</span></a>
             </div>
           </li>

@@ -52,3 +52,28 @@
 .navbar-light .navbar-toggler {
     border-color: white;
 }
+
+.btn-danger:hover {
+    background-color: #bd2130;
+}
+
+.alert-primary {
+    margin-top: 15px;
+}
+
+.dropdown-menu {
+    margin-left: -45px;
+}
+
+.form-control {
+    border-color: #28a745;
+    padding-right: calc(1.5em + .75rem);
+    background-repeat: no-repeat;
+    background-position: center right calc(.375em + .1875rem);
+    background-size: calc(.75em + .375rem) calc(.75em + .375rem);
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25);
+}

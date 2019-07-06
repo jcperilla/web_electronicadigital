@@ -104,5 +104,6 @@ function clean_form_vigilant(){
     document.getElementById("entry_time").value="";
     document.getElementById("departure_time").value="";
     document.getElementById("password").value="";
+    jQuery("#password").prop('required',true);
 }
 </script>

@@ -61,11 +61,11 @@
     margin-top: 15px;
 }
 
-.dropdown-menu {
-    margin-left: -45px;
-}
-
 .form-control:focus {
     border-color: #28a745;
     box-shadow: 0 0 0 0.2rem rgba(40,167,69,.25);
+}
+
+.form-inline {
+    min-width: 190px !important;
 }

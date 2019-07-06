@@ -89,7 +89,7 @@ function editarVigilante(datosVigilante)
 
     jQuery("#entry_time").val(datosVigilante.entry_time);
     jQuery("#departure_time").val(datosVigilante.departure_time);
-    jQuery("#password").val(datosVigilante.password);
+    jQuery("#password").prop('required',false);
 }
 
 function clean_form_vigilant(){

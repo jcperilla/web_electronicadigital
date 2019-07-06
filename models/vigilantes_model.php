@@ -95,13 +95,16 @@
         public function editarVigilante($data)
         {
             //Se inserta en la tabla principal (user)
-            $query = $this->db->connect()->prepare('UPDATE user SET  first_name = ?, last_name = ?, email = ?, password = ?, type_user = ? WHERE id =  ?');
+            if(empty($data["password"])) {
+                $query = $this->db->connect()->prepare('UPDATE user SET  first_name = ?, last_name = ?, email = ? WHERE id =  ?');
+                $query->execute([$data["first_name"], $data["last_name"], $data["email"], $data["id"]]);
+            }
+            else {
+                $pass = password_hash($data["password"], PASSWORD_BCRYPT);
+                $query = $this->db->connect()->prepare('UPDATE user SET  first_name = ?, last_name = ?, password = ?, email = ? WHERE id =  ?');
+                $query->execute([$data["first_name"], $data["last_name"], $pass, $data["email"], $data["id"]]);
+            }
             
-            $type_user='2';
-            $pass = password_hash($data["password"], PASSWORD_BCRYPT);
-
-            $query->execute([$data["first_name"], $data["last_name"], $data["email"], $pass, $type_user, $data["id"]]);
-
             //Se actualiza el horario del vigilante
             $query2 = $this->db->connect()->prepare('UPDATE vigilant SET entry_time = ?, departure_time = ? WHERE id =  ?');
 

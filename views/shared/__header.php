@@ -40,7 +40,7 @@
     <?php 
         if(isset(Session::get('user')['id'])) {
       ?>
-      <div class="form-inline my-2 my-lg-0 "> 
+      <div class="form-inline my-2 my-lg-0 " style=" min-width: 190px !important;"> 
       <ul class="navbar-nav mr-auto">
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

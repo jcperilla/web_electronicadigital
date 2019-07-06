@@ -76,8 +76,6 @@
 
 function editarVigilante(datosVigilante)
 {
-    console.log("entrooo");
-    
     jQuery("#id").val(Number(datosVigilante.id));
 
     document.getElementById("id").readOnly = true;
@@ -92,12 +90,19 @@ function editarVigilante(datosVigilante)
     jQuery("#entry_time").val(datosVigilante.entry_time);
     jQuery("#departure_time").val(datosVigilante.departure_time);
     jQuery("#password").val(datosVigilante.password);
-
-    console.log(Number(datosVigilante.id));
 }
 
-</script>
+function clean_form_vigilant(){
+    document.getElementById("id").readOnly = false;
+    document.getElementById("email").readOnly = false;
 
-<script type="text/javascript" src="<?php echo constant('URL')?>public/js/util.js">
-
+    document.getElementById("id").value="";
+    document.getElementById("idVigilante").value="";
+    document.getElementById("first_name").value="";
+    document.getElementById("last_name").value="";
+    document.getElementById("email").value="";
+    document.getElementById("entry_time").value="";
+    document.getElementById("departure_time").value="";
+    document.getElementById("password").value="";
+}
 </script>

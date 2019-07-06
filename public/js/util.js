@@ -58,18 +58,3 @@ function update_quotas(type) {
 		});
 	}
 }
-
-
-function clean_form_vigilant(){
-	document.getElementById("id").readOnly = false;
-	document.getElementById("email").readOnly = false;
-
-	document.getElementById("id").value="";
-	document.getElementById("idVigilante").value="";
-	document.getElementById("first_name").value="";
-	document.getElementById("last_name").value="";
-	document.getElementById("email").value="";
-	document.getElementById("entry_time").value="";
-	document.getElementById("departure_time").value="";
-	document.getElementById("password").value="";
-}

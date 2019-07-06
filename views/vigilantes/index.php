@@ -16,14 +16,13 @@
                 </div>
             <?php 
             }
-            /* por el momento se documenta
-            else if(isset($this->message_error)) { ?>
+            if(isset($this->message_error)) { ?>
                 <div class="alert alert-danger" role="alert">
                     <?php echo $this->message_error ?>
                 </div>
             <?php 
             }
-            */
+            
         ?>
         <center>
             <h1>Gestión de Vigilantes</h1>
@@ -57,6 +56,7 @@
                         <td><?php echo $vigilante["email"]; ?></td>
                         <td><?php echo $vigilante["entry_time"]; ?></td>
                         <td><?php echo $vigilante["departure_time"]; ?></td>
+                        <td class="d-none"><?php  ?></td>
                         <td><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#crearEditarVigilante" onclick='editarVigilante(<?php echo json_encode($vigilante); ?>)'><i class="fas fa-user-edit"></i>Editar</button></td>
                     </tr>
                     <?php
@@ -78,11 +78,9 @@ function editarVigilante(datosVigilante)
 {
     console.log("entrooo");
     
-
     jQuery("#id").val(Number(datosVigilante.id));
 
     document.getElementById("id").readOnly = true;
-    
 
     jQuery("#idVigilante").val(datosVigilante.id);
     jQuery("#first_name").val(datosVigilante.first_name);

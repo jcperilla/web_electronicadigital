@@ -55,7 +55,7 @@
         <div class="form-group row">
             <label for="password" class="col-sm-5 col-form-label">Contraseña</label>
             <div class="col-sm-7">
-                <input type="password" required class="form-control-plaintext" id="password" name="password" placeholder="Ingrese la clave">
+                <input type="input" required class="form-control-plaintext" id="password" name="password" placeholder="Ingrese la clave">
             </div>
         </div>
         <div class="modal-footer">

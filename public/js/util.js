@@ -26,9 +26,14 @@ function update_info(res) {
 function disabled_buttons() {
 	var busy = document.getElementById("cant_busy_txt").innerHTML;
 	var available = document.getElementById("can_available_txt").innerHTML;
+	var buttonOUT = document.getElementById("buttonOUT");
+	var buttonIN = document.getElementById("buttonIN");
 
-	document.getElementById("buttonOUT").disabled  = (busy <= 0);
-	document.getElementById("buttonIN").disabled  = (available <= 0);	 
+	if (buttonOUT!=null && buttonIN!=null) {
+		document.getElementById("buttonOUT").disabled  = (busy <= 0);
+		document.getElementById("buttonIN").disabled  = (available <= 0);	 
+	}
+
 }
 
 function update_quotas(type) {

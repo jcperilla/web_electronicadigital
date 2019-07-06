@@ -29,7 +29,11 @@
             {
                 $respuesta = $this->model->crearVigilante($_POST);
 
-                $this->view->message_exito = "¡Vigilante Insertado con Éxito!";
+                if ($respuesta==true) {
+                    $this->view->message_exito = "¡Vigilante guardado con éxito!";
+                } else {
+                    $this->view->message_error = "¡Oops algo sucedió y el vigilante no se pudo guardar!. Parece que el vigilante ya está registrado";
+                }
             }
             else
             {
